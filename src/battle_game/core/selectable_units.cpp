@@ -1,5 +1,6 @@
 #include "battle_game/core/game_core.h"
 #include "battle_game/core/units/lisi_tank.h" 
+#include "battle_game/core/units/new_tank.h"
 namespace battle_game {
 
 template <class UnitType, class... Args>
@@ -19,6 +20,7 @@ void GameCore::GeneratePrimaryUnitList() {
                                   unit->Author());
 
   ADD_SELECTABLE_UNIT(unit::lisi_tank);
+  ADD_SELECTABLE_UNIT(unit::new_tank);
   ADD_SELECTABLE_UNIT(unit::Tank);
 
   unit.reset();
